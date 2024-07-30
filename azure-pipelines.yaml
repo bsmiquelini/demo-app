@@ -1,0 +1,16 @@
+resources:
+  repositories:
+  - repository: templates
+    type: git
+    name: Devops-Corporativo/templates-ci
+
+trigger:
+- '*'
+
+stages:
+- template: pipeline.yaml@templates
+  parameters:
+    BuildType: Container
+    PathDockerfile: Dockerfile
+    Veracode: No
+    noCode: true

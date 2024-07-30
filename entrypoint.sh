@@ -2,11 +2,12 @@
 
 
 if [ "$ENABLE_BUTTON" = "true" ]; then
-    BUTTON="<button>Botão habilitado!</button>"
+    BUTTON="<button onclick='buttonAction()'>Botão habilitado!</button>"
 else
     BUTTON=""
 fi
 VALUES_CONTENT=$(cat /usr/share/nginx/html/charts/dev/values.yaml | grep -v '#' | sed 's/$/\\n/' | tr -d '\n')
+
 
 sed -e "s/{{BACKGROUND_COLOR}}/${BACKGROUND_COLOR}/" \
     -e "s/{{MENSAGEM}}/${MENSAGEM}/" \

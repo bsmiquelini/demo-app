@@ -20,6 +20,12 @@
 <h3>
 <p><a href="https://dev.azure.com/bancotoyota/Devops-Corporativo/_git/demo-deploy">Aplicação de teste</a></p>
 </h3>
+    <script>
+        function buttonAction() {
+            alert('Abrindo values da aplicação...');
+            window.open('https://dev.azure.com/bancotoyota/Devops-Corporativo/_git/demo-deploy?path=/charts/dev/values.yaml', '_blank');
+        }
+    </script>
 <footer> <p> Author: Bruno Miquelini </p> <p><a href="mailto:bruno.santos@yaman.com.br"> bruno.santos@yaman.com.br </a></p> </footer>
 </body>
 </html>
