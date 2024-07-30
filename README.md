@@ -1,20 +1,64 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+# My Nginx App
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+Este é um projeto de teste para criar uma aplicação Nginx que ajusta a cor do background da página, habilita ou desabilita um botão e define uma mensagem, tudo isso conforme variáveis de ambiente.
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+## Estrutura do Projeto
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+```
+my-nginx-app/
+├── Dockerfile
+├── entrypoint.sh
+├── index.html.template
+└── nginx.conf
+```
+
+## Arquivos
+
+- **Dockerfile**: Define a imagem Docker que será usada para a aplicação.
+- **entrypoint.sh**: Script de entrada que substitui as variáveis de ambiente no template HTML e inicia o Nginx.
+- **index.html.template**: Template HTML que usa variáveis de ambiente para definir o conteúdo.
+- **nginx.conf**: Arquivo de configuração do Nginx.
+
+## Variáveis de Ambiente
+
+- **BACKGROUND_COLOR**: Define a cor do background da página (e.g., `lightblue`, `red`).
+- **ENABLE_BUTTON**: Define se o botão será exibido ou não (`true` para exibir, `false` para não exibir).
+- **MENSAGEM**: Define a mensagem que será exibida na página.
+
+## Como Construir e Executar
+
+1. Clone o repositório e navegue até o diretório do projeto:
+   ```sh
+   git clone <URL_DO_REPOSITORIO>
+   cd my-nginx-app
+   ```
+
+2. Construa a imagem Docker:
+   ```sh
+   docker build -t my-nginx-app .
+   ```
+
+3. Execute o contêiner Docker com as variáveis de ambiente desejadas:
+   ```sh
+   docker run -e BACKGROUND_COLOR=lightblue -e ENABLE_BUTTON=true -e MENSAGEM="Olá, Mundo!" -p 8080:80 my-nginx-app
+   ```
+
+4. Acesse a aplicação em `http://localhost:8080`.
+
+## Exemplo de Uso
+
+Para alterar a cor de fundo, exibir o botão e definir uma mensagem personalizada, execute o contêiner com as variáveis apropriadas:
+
+```sh
+docker run -e BACKGROUND_COLOR=yellow -e ENABLE_BUTTON=true -e MENSAGEM="Bem-vindo ao Nginx App!" -p 8080:80 my-nginx-app
+```
+
+## Contribuição
+
+Sinta-se à vontade para contribuir com melhorias para este projeto. Faça um fork do repositório, crie uma branch com suas alterações e envie um pull request.
+
+## Licença
+
+Este projeto é distribuído sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+

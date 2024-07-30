@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação de teste - BTB Helm</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            background-color: {{BACKGROUND_COLOR}};
+        }
+    </style>
+</head>
+<body>
+    <h1>Menssagem: {{MENSAGEM}}</h1>
+    {{BUTTON}}
+    <h1>values.yaml:</h1>
+    <textarea rows="20" cols="80">{{VALUES_CONTENT}}</textarea>
+
+<h3>
+<p><a href="https://dev.azure.com/bancotoyota/Devops-Corporativo/_git/demo-deploy">Aplicação de teste</a></p>
+</h3>
+<footer> <p> Author: Bruno Miquelini </p> <p><a href="mailto:bruno.santos@yaman.com.br"> bruno.santos@yaman.com.br </a></p> </footer>
+</body>
+</html>
+
