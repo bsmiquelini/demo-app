@@ -3,6 +3,7 @@ resources:
   - repository: templates
     type: git
     name: Devops-Corporativo/templates-ci
+    ref: feature/newPipeWorkflow 
 
 trigger:
 - '*'
