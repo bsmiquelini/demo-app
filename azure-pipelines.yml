@@ -1,0 +1,13 @@
+trigger:
+- '*'
+
+pool:
+  name: Agent-Tests
+
+steps:
+- script: allure --version
+  displayName: 'Teste do Allure CLI'
+
+- script: node -v && npm --version
+  displayName: 'Teste do NPM'
+
