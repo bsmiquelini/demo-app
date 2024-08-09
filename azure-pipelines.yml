@@ -5,7 +5,7 @@ pool:
   name: Agent-Tests
 
 steps:
-- script: allure --version
+- script: id && allure --version
   displayName: 'Teste do Allure CLI'
 
 - script: node -v && npm --version
