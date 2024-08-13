@@ -9,5 +9,5 @@ steps:
   displayName: 'Teste do Allure CLI'
 
 - script: node -v && npm --version
-  displayName: 'Teste do NPM'
+  displayName: 'Teste do NPM '
 
