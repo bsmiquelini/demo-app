@@ -15,7 +15,7 @@ sed -e "s/{{BACKGROUND_COLOR}}/${BACKGROUND_COLOR}/" \
     -e "s|{{VALUES_CONTENT}}|${VALUES_CONTENT}|" \
     /index.html.template > /usr/share/nginx/html/index.html
 
-
+#
 echo "[+] Subindo a aplicação"
 echo " - cor: $BACKGROUND_COLOR"
 echo " - toggle: $ENABLE_BUTTON"
