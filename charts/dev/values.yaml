@@ -10,33 +10,14 @@ commonLabels: {}
 commonAnnotations: {}
 nodeSelector: {}
 livenessProbe:
-  enabled: false
+  enabled: true
   type: httpGet
-  #command: []
-  #failureThreshold: 3
-  #path: /actuator/liveness
-  #port: 8080
-  #scheme: HTTP
-  #initialDelaySeconds: 50
-  #periodSeconds: 30
-  #successThreshold: 1
-  #timeoutSeconds: 30
+  path: /
 
 readinessProbe:
-  enabled: false
+  enabled: true
   type: httpGet
-  # Baseado em comando....##
-  #type: exec
-  #command: ["/bin/sh", "-i", "-c", "echo 'Teste'" ]
-  ###########################
-  #failureThreshold: 3
-  #path: /actuator/readiness
-  #port: 8080
-  #scheme: HTTP
-  #initialDelaySeconds: 50
-  #periodSeconds: 30
-  #successThreshold: 1
-  #timeoutSeconds: 30
+  path: /
 
 resources:
   limits:
@@ -62,9 +43,9 @@ environment:
   - name: STAGE
     value: 'HML'
   - name: BACKGROUND_COLOR
-    value: blue
+    value: white
   - name: ENABLE_BUTTON
-    value: true
+    value: false
   - name: MENSAGEM
     value: "Aplicação de testes!"
 
