@@ -6,14 +6,14 @@ if [ "$ENABLE_BUTTON" = "true" ]; then
 else
     BUTTON=""
 fi
-VALUES_CONTENT=$(cat /usr/share/nginx/html/charts/dev/values.yaml | grep -v '#' | sed 's/$/\\n/' | tr -d '\n')
+VALUES_CONTENT=$(cat /app/values.yaml | grep -v '#' | sed 's/$/\\n/' | tr -d '\n')
 
 
 sed -e "s/{{BACKGROUND_COLOR}}/${BACKGROUND_COLOR}/" \
     -e "s/{{MENSAGEM}}/${MENSAGEM}/" \
     -e "s|{{BUTTON}}|${BUTTON}|" \
     -e "s|{{VALUES_CONTENT}}|${VALUES_CONTENT}|" \
-    /index.html.template > /usr/share/nginx/html/index.html
+    /index.html.template > /app/index.html
 
 #
 echo "[+] Subindo a aplicação"
