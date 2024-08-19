@@ -62,7 +62,7 @@ environment:
   - name: STAGE
     value: 'HML'
   - name: BACKGROUND_COLOR
-    value: yellow
+    value: blue
   - name: ENABLE_BUTTON
     value: true
   - name: MENSAGEM
