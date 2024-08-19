@@ -10,7 +10,7 @@ COPY favicon.ico /app/favicon.ico
 COPY charts/dev/values.yaml /app/values.yaml
 
 RUN chmod +x /entrypoint.sh \
-    && chmod -R o+rwx /app/ /var/cache/nginx/
+  && chmod -R g+rwx /app/ /var/cache/nginx/ /var/run/
 
 EXPOSE 8080
 ENTRYPOINT ["/entrypoint.sh"]
