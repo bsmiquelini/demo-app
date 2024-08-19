@@ -1,6 +1,7 @@
 #!/bin/sh
 
-
+set -x
+id 
 if [ "$ENABLE_BUTTON" = "true" ]; then
     BUTTON="<button onclick='buttonAction()'>Botão habilitado!</button>"
 else
