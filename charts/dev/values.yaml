@@ -43,11 +43,11 @@ environment:
   - name: STAGE
     value: 'HML'
   - name: BACKGROUND_COLOR
-    value: white
+    value: green
   - name: ENABLE_BUTTON
-    value: false
+    value: true
   - name: MENSAGEM
-    value: "Aplicação de testes!"
+    value: "Aplicação de testes! v2"
 
 metrics:
   cpu:
