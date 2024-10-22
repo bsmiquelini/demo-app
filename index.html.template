@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplicação de teste - BTB Helm</title>
+    <title>Aplicação de teste - Helm</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         body {
@@ -18,15 +18,15 @@
     <textarea rows="20" cols="80">{{VALUES_CONTENT}}</textarea>
 
 <h3>
-<p><a href="https://dev.azure.com/bancotoyota/Devops-Corporativo/_git/demo-deploy">Aplicação de teste</a></p>
+<p><a href="https://github.com/bsmiquelini/demo-app">Aplicação de teste</a></p>
 </h3>
     <script>
         function buttonAction() {
             alert('Abrindo values da aplicação...');
-            window.open('https://dev.azure.com/bancotoyota/Devops-Corporativo/_git/demo-deploy?path=/charts/dev/values.yaml', '_blank');
+            window.open('https://github.com/bsmiquelini/demo-app?path=/charts/dev/values.yaml', '_blank');
         }
     </script>
-<footer> <p> Author: Bruno Miquelini </p> <p><a href="mailto:bruno.santos@yaman.com.br"> bruno.santos@yaman.com.br </a></p> </footer>
+<footer> <p> Author: Bruno Miquelini </p> <p><a href="mailto:bruno.miquelini@msn.com.br"> bruno.miquelini@msn.com.br </a></p> </footer>
 </body>
 </html>
 
